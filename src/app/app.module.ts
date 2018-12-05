@@ -11,7 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
-import { AnunciosListComponent } from './anuncios-list/anuncios-list.component';
 
 
 @NgModule({
@@ -20,8 +19,7 @@ import { AnunciosListComponent } from './anuncios-list/anuncios-list.component';
     GameListComponent,
     RegistrationComponent,
     LoginComponent,
-    ProductsComponent,
-    AnunciosListComponent
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
