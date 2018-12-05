@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+}
+
+.section-dark {
+  background-image: url(../../assets/img/bg-dark.jpg)
+}
+
+.section-light {
+  background-image: url(../../assets/img/bg-light.jpg)
+}
+
+.section-title-light {
+  color: #f8f9fa;
+}

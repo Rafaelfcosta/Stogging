@@ -1,0 +1,73 @@
+<ngb-carousel *ngIf="games">
+  <ng-template ngbSlide *ngFor="let g of games">
+      <img class="d-block w-100" src={{g.url_capa}}>
+      <div class="carousel-caption">
+          <h3>{{g.titulo}}</h3>
+          <p>{{g.descricao}}</p>
+      </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="section-dark">
+  <div class="recent py-5">
+    <div class="container">
+      <h1 class="section-title-light">Recent</h1>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let g of games">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="{{g.url_capa}}" alt="Card image cap">
+            <div class="card-body">
+              <a href="#">
+                <h5 class="card-text text-center">{{g.titulo}}</h5>
+              </a>
+              <p class="card-text">{{g.descricao}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success">R$ 199,99</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+                <small class="text-muted">
+                  <i class="fab fa-windows"></i>
+                  <i class="fab fa-apple"></i>
+                  <i class="fab fa-linux"></i>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-light">
+  <div class="recent py-5">
+    <div class="container">
+      <h1 class="section-title-dark">Pre-Order</h1>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let g of games">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="{{g.url_capa}}" alt="Card image cap">
+            <div class="card-body">
+              <a href="#">
+                <h5 class="card-text text-center">{{g.titulo}}</h5>
+              </a>
+              <p class="card-text">{{g.descricao}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success">R$ 199,99</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+                <small class="text-muted">
+                  <i class="fab fa-windows"></i>
+                  <i class="fab fa-apple"></i>
+                  <i class="fab fa-linux"></i>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
