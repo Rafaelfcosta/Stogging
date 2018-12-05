@@ -1,0 +1,70 @@
+<div *ngIf="game" class="container">
+  <div class="col-lg-12">
+
+    <div class="ibox product-detail">
+      <div class="ibox-content">
+
+        <div class="row">
+          <div class="col-md-5">
+
+
+            <div class="product-images">
+
+              <div>
+                  <img src="{{game.url_capa}}" width="400px">
+              </div>
+
+
+            </div>
+
+          </div>
+          <div class="col-md-7">
+
+            <h2 class="font-bold m-b-xs">
+              {{game.titulo}}
+            </h2>
+            <div class="m-t-md">
+              <h2 class="product-main-price">R$199,99</h2>
+            </div>
+            <hr>
+
+            <h4>Descrição</h4>
+
+            <div class="text-muted">
+              {{game.descricao}}
+
+              <br />
+              <br />
+
+            </div>
+            <dl class="small m-t-md">
+              <h5>Detalhes</h5>
+              <dt>Gêneros</dt>
+              <dd *ngFor="let g of game.generos">{{g}}</dd>
+
+              <dt>Sistemas Operacionais</dt>
+              <dd *ngFor="let os of game.os">{{os}}</dd>
+
+
+              <dt>Data de Lançamento</dt>
+              <dd>{{game.lancamento}}</dd>
+            </dl>
+            <hr>
+
+            <div>
+              <div class="btn-group">
+                <button class="btn btn-primary btn-sm"><i class="fa fa-cart-plus"></i> Add to cart</button>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

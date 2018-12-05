@@ -17,6 +17,6 @@ export class GameListComponent implements OnInit {
   }
 
   getGames(){
-    this.gameService.getGames().subscribe(data => this.games = data);
+    this.gameService.getGames().subscribe(data => this.games = data.slice(0,3));
   }
 }

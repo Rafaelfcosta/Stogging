@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { FormsModule } from '@angular/forms';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     GameListComponent,
     RegistrationComponent,
     LoginComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

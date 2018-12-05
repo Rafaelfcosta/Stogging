@@ -2,7 +2,7 @@
   <ng-template ngbSlide *ngFor="let g of games">
       <img class="d-block w-100" src={{g.url_capa}}>
       <div class="carousel-caption">
-          <h3>{{g.titulo}}</h3>
+          <a href="product/{{g.id}}"><h3>{{g.titulo}}</h3></a>
           <p>{{g.descricao}}</p>
       </div>
   </ng-template>
@@ -17,7 +17,7 @@
           <div class="card mb-4 shadow-sm">
             <img class="card-img-top" src="{{g.url_capa}}" alt="Card image cap">
             <div class="card-body">
-              <a href="#">
+              <a href="product/{{g.id}}">
                 <h5 class="card-text text-center">{{g.titulo}}</h5>
               </a>
               <p class="card-text">{{g.descricao}}</p>

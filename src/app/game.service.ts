@@ -14,4 +14,9 @@ export class GameService {
     return this.http.get<any[]>(`${this.gamesUrl}`);
   }
 
+  getGameById(id){
+    let url = this.gamesUrl + "/" +id;
+    return this.http.get(url);
+  }
+
 }
