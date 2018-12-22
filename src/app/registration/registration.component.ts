@@ -12,33 +12,40 @@ export class RegistrationComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    /*
+    
+
+    
+    
+  }
+  onSubmit(f: NgForm){
+    console.log(JSON.stringify(f.value));
+    if(f.valid){
+      this.registerUser(f.value);
+    }
+  }
+
+  registerUser(user){
     this.http.post("http://localhost:8080/Stogging-BackEnd/api/cliente",
     {
-      "email": "testeEEEEEE@teste.com",
+      "email": user.email,
       "endereco": {
-          "cidade": "itajai",
-          "estado": "sc",
+          "cidade": user.cidade,
+          "estado": user.estado,
       },
       "login": {
-          "username": "rafael",
-          "senha": "senha"
+          "username": user.username,
+          "senha": user.password1
       },
-      "nome": "TESTEZERA"
+      "nome": user.nome
     })
     .subscribe(
-      data =>{
-        console.log("Fez o post", data);
+      res =>{
+        console.log("Fez o post", res);
       },
       error => {
         console.log("Deu rum", error);
       }
     );
-    */
   }
-  
-  onSubmit(f: NgForm){
-    console.log(f.getFormGroup);
-    console.log(f.valid);
-  }
+
 }

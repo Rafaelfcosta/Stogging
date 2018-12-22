@@ -13,4 +13,9 @@ export class AnuncioService {
   getAnuncios(){
     return this.http.get<any[]>(`${this.anunciosUrl}`);
   }
+
+  getAnunciosByGameId(id){
+    let url = this.anunciosUrl + "findByGameId/" +id;
+    return this.http.get<any[]>(url);
+  }
 }
